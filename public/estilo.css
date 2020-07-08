@@ -1,0 +1,144 @@
+*{ /*alterando o padrao css da pagina*/
+    box-sizing: border-box;
+}
+
+html, body{
+    font-family: 'Lato', sans-serif;
+    margin: 0px;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f9f9f9;
+}
+h1,h2{
+    color:#000000cc;
+}
+
+header, main, footer{
+    text-align: center;
+}
+
+header, .form, main,footer{
+    margin: 0px auto 70px auto;
+
+    width: 90%;
+    max-width: 500px;
+}
+
+header h1, main h2{
+    margin-bottom: 70px;
+}
+header p{
+    font-size: 14px;
+}
+main h2 span{
+    color: #ff4f4f;
+}
+header button{
+    margin-top: 16px;
+    padding: 8px 16px;
+    border: none;
+    background-color:#ff4f4f;
+    color: white;
+    font-weight: bold;  
+    border-radius: 5px;
+}
+
+header button:hover{
+    background-color: #d42828;
+    transition: 300ms;
+}
+
+.form h2{
+    text-align: right;
+    color:#ffffffee;
+    font-size: 18px;
+}
+
+section.form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 45px;
+    align-items: center;
+    height: auto;
+    
+    background-color: #ff4f4f ;
+    border-radius: 10px;
+    color: white;
+    padding: 16px 64px;
+}
+
+form input, form button{
+    margin-bottom: 4px;
+    width: 100%;
+    padding: 8px 16px;
+    background-color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    border: 1px #ffffff88 solid;
+}
+
+form input{
+    background-color:transparent;
+}
+form input::placeholder{
+    color: white;
+}
+
+form button:hover{
+    background-color: rgb(216, 174, 174);
+    transition: 300ms;
+}
+
+main .donors{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+}
+
+.blood{
+    color: #ff4f4f;
+    font-weight: bolder;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    position:relative;
+    justify-content: center;
+}
+
+.blood::before{
+    content:"";
+    background-color: #aaa2a22c;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    border-radius: 50%;
+    border-top-right-radius: 0;
+    transform: rotate(-45deg);
+}
+
+.donor p{
+    margin-top: 24px;
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+footer{
+    margin-top: auto;
+    padding: 16px;
+
+    border-top: 1px gray solid;
+}
+
+/*funcionalidades do javascript*/
+section.form{
+    transition: 300ms;
+}
+section.form.hide{
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    margin-top: -70px;
+}
